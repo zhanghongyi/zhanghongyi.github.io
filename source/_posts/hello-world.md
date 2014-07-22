@@ -1,37 +1,29 @@
 title: Hello World
 ---
-Welcome to [Hexo](http://hexo.io/)! This is your very first post. Check [documentation](http://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [trobuleshooting](http://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/tommy351/hexo/issues).
+一直都很羡慕愿意坚持写博客的人，看到Hexo感觉眼前一亮，一方面是对node.js比较熟悉，更让我惊喜的是连default theme都这么美，配置也比octopress方便很多。
+<!--more-->
+按照惯例，先跟World打个招呼。
 
-## Quick Start
 
-### Create a new post
+```C
+#include<stdio.h>
 
-``` bash
-$ hexo new "My New Post"
+int main()
+{
+	printf("Hello World\n");
+}
 ```
 
-More info: [Writing](http://hexo.io/docs/writing.html)
-
-### Run server
-
-``` bash
-$ hexo server
+```javascript
+console.log("Hello World");
 ```
 
-More info: [Server](http://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
+```swift
+println("Hello World")
 ```
 
-More info: [Generating](http://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
+```bash
+$ echo "Hello World"
 ```
 
-More info: [Deployment](http://hexo.io/docs/deployment.html)
+Thanks to [Hexo](http://hexo.io).
