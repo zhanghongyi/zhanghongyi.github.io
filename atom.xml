@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[写字的地方]]></title>
+  <subtitle><![CDATA[但行好事 莫问前程]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://zhanghongyi.github.io/"/>
+  <updated>2014-07-22T09:22:41.504Z</updated>
+  <id>http://zhanghongyi.github.io/</id>
+  
+  <author>
+    <name><![CDATA[Hongyi Zhang]]></name>
+    
+  </author>
+  
+  <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[在Pages中高亮代码]]></title>
+    <link href="http://zhanghongyi.github.io/2014/07/19/highlight-in-pages/"/>
+    <id>http://zhanghongyi.github.io/2014/07/19/highlight-in-pages/</id>
+    <published>2014-07-20T00:32:15.000Z</published>
+    <updated>2014-07-20T01:14:30.000Z</updated>
+    <content type="html"><![CDATA[<p>在用Pages写报告的时候，常常为如何高亮代码而苦恼。我原来的做法是建立一个1×1的表格，再将代码copy进去，但是这样又增加了排版的复杂度，并不够方便。直到我遇见了<a href="http://www.andre-simon.de/doku/highlight/en/highlight.php" target="_blank" rel="external">Highlight</a>。</p>
+<p>使用Highlight只要两步就可以轻松地将代码copy到剪切板，然后再Ctrl+v到文档中，就搞定了。<br><a id="more"></a></p>
+<p>首先，安装Highlight。如果Mac上有安装<a href="http://brew.sh/" target="_blank" rel="external">Homebrew</a>，<code>brew install highlight</code> 即可。如果没有Homebrew, 嗯…我觉得还是装一个先好了。Homebrew是Mac上一个很好用的包管理工具。</p>
+<p>最后，没错就是最后了，使用Highlight来高亮代码。在terminal中执行 <code>highlight filename -O rtf | pbcopy</code>，高亮好的代码就已经在你的剪切板里啦。你可以粘贴到你想要的文档里去，包括但不限于Pages，Keynote。</p>
+<h4 id="Tips:">Tips:</h4>
+<ol>
+<li><p>如何指定高亮的语言？</p>
+<p> Highlight几乎支持你能想到的所有语言，完整地list可以查看<a href="http://www.andre-simon.de/doku/highlight/en/langs.php" target="_blank" rel="external">官方说明</a>，使用 <code>— syntax python</code> 或者 <code>—syntax py</code>，可以指定语言为python，其他同理。</p>
+</li>
+<li><p>Highlight甚至提供了不同的主题供选择</p>
+<p> <code>highlight -w</code> 可以查询所有的主题，使用<code>—style themename</code>可以指定想要的主题。</p>
+</li>
+<li><p><code>-O rtf</code> 是什么意思？</p>
+<p> 使用<code>-O</code>可以指定输出的格式，rtf只是其中的一种，还可以输出为html, latex, SVG.</p>
+</li>
+<li><p>生成文件</p>
+<p> 使用小写的<code>-o</code>可以指定输出为文件，例如<code>highlight -o hello.html hello.py</code> 就可以生成一个坐拥高亮代码的html啦。</p>
+</li>
+<li><p>显示行号</p>
+<p> <code>—line-number</code></p>
+</li>
+<li><p>使用echo</p>
+<p>如果只有一小行代码的话，不妨使用echo吧。<code>echo “print(‘Hello, World.’)” | highlight -O rtf —syntax py | pbcopy</code></p>
+</li>
+<li><p>更多</p>
+<p> 我用到的就是这么多啦，如果有更多的需求，可以<code>highlight -h</code> 或者到官方wiki了解更多惊喜。</p>
+</li>
+</ol>
+<p>以上。</p>
+]]></content>
+    <summary type="html"><![CDATA[<p>在用Pages写报告的时候，常常为如何高亮代码而苦恼。我原来的做法是建立一个1×1的表格，再将代码copy进去，但是这样又增加了排版的复杂度，并不够方便。直到我遇见了<a href="http://www.andre-simon.de/doku/highlight/en/highlight.php" target="_blank" rel="external">Highlight</a>。</p>
+<p>使用Highlight只要两步就可以轻松地将代码copy到剪切板，然后再Ctrl+v到文档中，就搞定了。<br>]]></summary>
+    
+      <category term="tips" scheme="http://zhanghongyi.github.io/tags/tips/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <link href="http://zhanghongyi.github.io/2014/07/11/hello-world/"/>
+    <id>http://zhanghongyi.github.io/2014/07/11/hello-world/</id>
+    <published>2014-07-12T01:47:54.000Z</published>
+    <updated>2014-07-20T01:15:20.000Z</updated>
+    <content type="html"><![CDATA[<p>一直都很羡慕愿意坚持写博客的人，看到Hexo感觉眼前一亮，一方面是对node.js比较熟悉，更让我惊喜的是连default theme都这么美，配置也比octopress方便很多。<br><a id="more"></a><br>按照惯例，先跟World打个招呼。</p>
+<figure class="highlight C"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="preprocessor">#include&lt;stdio.h&gt;</span>
+
+<span class="keyword">int</span> main()
+{
+	<span class="built_in">printf</span>(<span class="string">"Hello World\n"</span>);
+}
+</pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>console.log(<span class="string">"Hello World"</span>);
+</pre></td></tr></table></figure>
+
+<figure class="highlight swift"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="function"><span class="title">println</span><span class="params">(<span class="string">"Hello World"</span>)</span></span>
+</pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>$ <span class="built_in">echo</span> <span class="string">"Hello World"</span>
+</pre></td></tr></table></figure>
+
+<p>Thanks to <a href="http://hexo.io" target="_blank" rel="external">Hexo</a>.</p>
+]]></content>
+    <summary type="html"><![CDATA[<p>一直都很羡慕愿意坚持写博客的人，看到Hexo感觉眼前一亮，一方面是对node.js比较熟悉，更让我惊喜的是连default theme都这么美，配置也比octopress方便很多。<br>]]></summary>
+    
+  </entry>
+  
+</feed>
