@@ -1,0 +1,22 @@
+@media (min-width: 1200px) {
+  .container {
+    width: 720px;
+  }
+}
+
+body {
+	font-family: 'Roboto', 'Hiragino Sans GB', sans-serif;
+  font-size: 16px;
+}
+
+.content {
+	margin-top: 50%;
+}
+
+a {
+	color: #F08080;
+}
+
+a:hover, a:focus{
+  color: #F08080;
+}
